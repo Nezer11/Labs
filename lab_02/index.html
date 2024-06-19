@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+   .fruit-container {
+      background-color: #ffc5c5;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+   .fruit-list {
+      background-color: transparent;
+      padding: 1rem;
+      list-style: none;
+      counter-reset: fruit-counter;
+    }
+
+   .fruit-list li {
+      background-color: #e9dcdc;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border: 2px solid #8c6c8c;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+    }
+
+   .fruit-list li::before {
+      content: counter(fruit-counter);
+      counter-increment: fruit-counter;
+      color: #8c6c8c;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+
+   .fruit-list li span {
+      color: #222;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      background-color: #9c69ab;
+      padding: 0.4rem 0.6rem;
+      border-radius: 5px;
+    }
+  </style>
+  <title>Fruit List</title>
+</head>
+<body>
+  <h1>Fruit List</h1>
+  <div class="fruit-container">
+    <ol class="fruit-list">
+      <li><span>Apple</span></li>
+      <li><span>Orange</span></li>
+      <li><span>Pineapple</span></li>
+      <li><span>Pear</span></li>
+      <li><span>Cherry</span></li>
+    </ol>
+  </div>
+</body>
+</html>

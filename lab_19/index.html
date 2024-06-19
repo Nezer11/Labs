@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Management</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Product Management App</h1>
+  <button id="createProductBtn">Create Product</button>
+</header>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Create New Product</h2>
+    <form id="productForm">
+      <label for="productName">Назва:</label>
+      <input type="text" id="productName" name="productName" required>
+
+      <label for="productDescription">Опис:</label>
+      <textarea id="productDescription" name="productDescription" required></textarea>
+
+      <label for="productPrice">Ціна:</label>
+      <input type="number" id="productPrice" name="productPrice" min="0" required>
+
+      <label for="productDiscount">Знижка:</label>
+      <input type="number" id="productDiscount" name="productDiscount" min="0" required>
+
+      <label for="productCategory">Категорія:</label>
+      <select id="productCategory" name="productCategory" required>
+        <option value="smartphones">Смартфони</option>
+        <option value="laptops">Ноутбуки</option>
+        <option value="fragrances">Аромати</option>
+        <option value="other">Інше</option>
+      </select>
+
+      <label for="productImage">Зображення (URL):</label>
+      <input type="url" id="productImage" name="productImage" required>
+
+      <button type="submit" id="saveProductBtn">Save Product</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

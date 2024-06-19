@@ -1,0 +1,80 @@
+.container {
+    max-width: 240px;
+    background-color: #f5f5f5; /* на власний розсуд */
+    border: 2px solid #ccc; /* на власний розсуд */
+    border-radius: 10px; /* на власний розсуд */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Вирівнюємо по вертикалі та горизонталі */
+    padding: 20px;
+    margin: 0 auto; /* Центруємо по горизонталі */
+}
+
+
+.image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* квадратні зображення */
+}
+
+.properties {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.manufacturer,
+.socket,
+.frequency,
+.core,
+.cores,
+.tdp {
+    font-size: 16px;
+}
+
+.manufacturer {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px; /* Додали відступ зверху */
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.edit-button {
+    background-color: #007bff; /* на власний розсуд */
+    color: #fff;
+}
+
+.delete-button {
+    background-color: #ff6666; /* червоний відтінок для кнопки "Delete" */
+    color: #fff;
+}
+
+.properties-button {
+    background-color: #008000; /* на власний розсуд */
+    color: #fff;
+}
+
+.edit-button:hover,
+.delete-button:hover,
+.properties-button:hover {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button:hover {
+    background-color: #cc0000; /* темно-червоний відтінок при наведенні */
+}

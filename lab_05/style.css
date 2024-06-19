@@ -1,0 +1,32 @@
+.photo-frame {
+    position: relative;
+    display: inline-block;
+}
+
+.photo-frame::before,
+.photo-frame::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px); /* Збільшуємо ширину на 8px, щоб рамка не обрізала фото */
+    height: calc(100% + 8px); /* Збільшуємо висоту на 8px, щоб рамка не обрізала фото */
+    border: 4px solid pink; /* Розова рамка */
+    z-index: -1; /* Переміщаємо рамку під зображення */
+    transform: rotate(45deg); /* Нахил під 45 градусів */
+}
+
+.photo-frame::before {
+    top: -4px; /* Зсуваємо вгору на 4px, щоб рамка не перекривалася зображенням */
+    left: -4px; /* Зсуваємо вліво на 4px, щоб рамка не перекривалася зображенням */
+}
+
+.photo-frame::after {
+    bottom: -4px; /* Зсуваємо вниз на 4px, щоб рамка не перекривалася зображенням */
+    right: -4px; /* Зсуваємо вправо на 4px, щоб рамка не перекривалася зображенням */
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: rotate(-45deg); /* Зворотній нахил для зображення */
+}

@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок */
+    width: auto; /* Автоматична ширина для розширення контейнера */
+    height: auto; /* Автоматична висота для розширення контейнера */
+    border: 2px solid black;
+    padding: 20px;
+    box-sizing: border-box; /* Щоб розміри включали padding та border */
+    justify-content: flex-start; /* Вирівнювання в початковому положенні */
+  }
+  

@@ -1,0 +1,49 @@
+
+.clock {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
+    margin: auto; /* Центрування годинника на екрані */
+}
+
+.hand {
+    position: absolute;
+    width: 2px;
+    background-color: #000;
+    top: 0%;
+    left: 50%; /* Розміщення стрілок у центрі */
+    transform-origin: bottom;
+    transform: translateX(-50%); 
+}
+
+.hour {
+    height: 40%;
+    width: 4px;
+    transform: rotate(90deg);
+    animation: rotateOnce 43200s infinite linear; /* 12 годин в секундах */
+}
+
+.minute {
+    width: 3px;
+    height: 45%;
+    transform: rotate(90deg);
+    animation: rotateOnce 3600s infinite linear; /* 60 хвилин в секундах */
+}
+
+.second {
+    height: 48%;
+    background-color: red;
+    transform: rotate(90deg);
+    animation: rotateOnce 60s infinite linear; /* 60 секунд */
+}
+
+@keyframes rotateOnce {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
